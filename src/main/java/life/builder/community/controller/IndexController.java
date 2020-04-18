@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version:1.0
  */
 @Controller //Controller的意思就是说我允许这个类去接收前端的一个请求
-public class HelloController {
+public class IndexController {
 
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name") String name,Model model){
-        model.addAttribute("name", name);
-        return "hello";
+    @GetMapping("/")
+    public String Index(){
+        return "Index";
     }
 }
